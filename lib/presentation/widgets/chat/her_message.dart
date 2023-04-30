@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class HerMessage extends StatelessWidget {
-  const HerMessage({super.key});
+  final String message;
+
+  const HerMessage({super.key, required this.message});
 
   @override
   Widget build(BuildContext context) {
@@ -15,9 +17,9 @@ class HerMessage extends StatelessWidget {
             color: color.secondary,
             borderRadius: BorderRadius.circular(20),
           ),
-          child: const Padding(
-            padding: EdgeInsets.all(10),
-            child: Text('Hola mundo.', style: TextStyle(color: Colors.white)),
+          child: Padding(
+            padding: const EdgeInsets.all(10),
+            child: Text(message, style: const TextStyle(color: Colors.white)),
           ),
         ),
         const SizedBox(
